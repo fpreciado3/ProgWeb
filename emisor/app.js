@@ -1,14 +1,16 @@
-var Emitter = require('./emitter'); // inyeccion de la dependencia
+// var Emitter = require('./emitter'); inyeccion de la dependencia
+var Emitter = require('events');
+var config = require('./config');
 
 var emtr = new Emitter; // se crea el emisor de eventos
 
-emtr.on('greet', () => { // creacion de la primer funcion greet
+emtr.on(config.events.GREET, () => { // creacion de la primer funcion greet
     console.log('Somewhere, someone said hello.'); 
-})
+});
 
 emtr.on('greet', () => { // creacion de la segunda funcion greet
     console.log('A greeting occured!');
-})
+});
 
 console.log('Hello!');
 emtr.emit('greet');
