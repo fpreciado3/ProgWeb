@@ -1,0 +1,22 @@
+{
+  "name": "08.-practica-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpreciado3/ProgWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fpreciado3/ProgWeb/issues"
+  },
+  "homepage": "https://github.com/fpreciado3/ProgWeb#readme",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
