@@ -8,13 +8,13 @@ emtr.on(config.events.GREET, () => { // creacion de la primer funcion greet
     console.log('Somewhere, someone said hello.'); 
 });
 
-emtr.on('greet', () => { // creacion de la segunda funcion greet
+emtr.on(config.events.GREET, () => { // creacion de la segunda funcion greet
     console.log('A greeting occured!');
 });
 
 console.log('Hello!');
 emtr.emit('greet');
-emtr.on('jump', () => { // creacion de la funcion jump
+emtr.on(config.events.JUMP, () => { // creacion de la funcion jump
     console.log('someone jumped!'); 
 });
 
