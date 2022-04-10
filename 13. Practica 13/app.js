@@ -2,7 +2,7 @@ var express = require('express'); // inyección de la dependencia express
 var app = express(); // se declara express
 app.set('view engine', 'ejs');
 
-var port = process.env.PORT || 3003 // estableciendo el puerto 3000 para listen
+var port = process.env.PORT || 3004 // estableciendo el puerto 3000 para listen
 app.use('/assets', express.static(__dirname + '/public')); // define como directorio virtual assets para 
 // contenido estático dirigido a una carpeta física llamada public dentro del directorio donde está __dirname}
 // primer ruta nivel raíz
@@ -28,6 +28,6 @@ app.get('/person/:id', function(req, res) {
     res.render('person', { ID: req.params.id }); // concatenación de las dos partes del html con el parámetro en params
 });
 
-app.get('/number/:id', function(req, res) {
-    res.render('number');
+app.get('/numbers/:id', function(req, res) { // ruta para directorio numbers
+    res.render('numbers', {number: req.params.id}); // render de numbers
 });
