@@ -2,7 +2,7 @@ const express = require('express');
 let app = express();
 app.set('view engine', 'ejs');
 
-let PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT || 3001;
 app.use('/assets', express.static(__dirname + 'public'));
 
 app.get('/', (req, res) => {
@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/person/:id', (req,res) =>{ 
-    res.render('person',{ID: req.params.id, Qstr: req.query.qrst});
+    res.render('person',{ID: req.params.id, MSG: req.query.message, TMS: req.query.times});
 });
 
 app.listen(PORT);

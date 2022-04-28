@@ -8,6 +8,39 @@
 </head>
 <body>
     <h1>Person: <%= ID %></h1>
-    <h2>Query string value: <%= Qstr %></h2>
+    <h2>Mensaje: <%= MSG %></h2>
+    <% switch(MSG) {  %>
+        <%  case 'Hola': %>
+            <% if(<%= TMS %> > 0) { %>
+               <% for(let i = 1; i <= <%= TMS %>; i++) { %>
+                    <h3>
+                        <%= MSG %> 
+                        <%= ID %>
+                    </h3>
+               <% } %>
+           <% } %>
+         <% break; %>
+        <% case 'Bienvenido': %>
+        <% if(<%= TMS %> > 0) { %>
+            <% for(let i = 1; i <= <%= TMS %>; i++) { %>
+                 <h3>
+                    <%= MSG %> 
+                    <%= ID %>
+                 </h3>
+            <% } %>
+        <% } %>
+      <% break; %>
+      <%  case 'Adios': %>
+        <% if(<%= TMS %> > 0) { %>
+            <% for(let i = 1; i <= <%= TMS %>; i++) { %>
+                 <h3>
+                    <%= MSG %> 
+                    <%= ID %>
+                </h3>
+            <% } %>
+        <% } %>
+      <% break; %>
+        <%  default: %>
+  <%  } %>
 </body>
 </html>
