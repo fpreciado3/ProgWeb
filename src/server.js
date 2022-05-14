@@ -9,7 +9,7 @@ app.use(personsRoute);
 app.use('/assets', express.static(__dirname + '/public')); // carpeta de contenido estático
 
 //definiendo puerto
-let PORT = process.env.PORT || 3001;
+let PORT = process.env.PORT || 3002;
 
 app.listen(PORT, () => {
     console.log('Escuchando en el puerto 3000'); // escucha del puerto
