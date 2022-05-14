@@ -24,8 +24,10 @@ app.get('/student', (req,res) =>{ // handler de student
 
 app.post('/student', (req,res) => { // definiendo post de student
     res.send(`First name es: ${req.body.fname}, Last name es: ${req.body.lname}`)
-});
+}); 
 
+
+//enviando callback como parametro extra para ejecutar previo al handler
 app.post('/personjson', express.json({type: '*/*'}), (req, res) => {
     console.log('EL objeto contiene:', {req, body});
     console.log('Nombre:', req.body.firstname);
