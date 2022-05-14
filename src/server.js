@@ -1,6 +1,6 @@
 let express = require('express'); // inyección de dependencia express
 
-let app = express; // declaración de app express
+let app = express(); // declaración de app express
 
 let personsRoute = require('./routes/person'); // definiendo router de persons
 
@@ -9,8 +9,8 @@ app.use(personsRoute);
 app.use('/assets', express.static(__dirname + '/public')); // carpeta de contenido estático
 
 //definiendo puerto
-let PORT = process.env.PORT || 3002;
+let PORT = process.env.PORT || 3003;
 
 app.listen(PORT, () => {
-    console.log('Escuchando en el puerto 3000'); // escucha del puerto
+    console.log('Escuchando en el puerto 3003'); // escucha del puerto
 })
