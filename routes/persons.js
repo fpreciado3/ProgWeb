@@ -14,7 +14,7 @@ router.get('/person', function(req, res) {
     res.render('person'); // render de vista
 });
 
-router.post('/addPerson', function(req, res) { 
+router.post('/addPerson', function(req, res) { // realizando addperson con POST
     const myPerson = new Person({ // crea entidad
         nombre: req.body.nombre,
         edad: req.body.edad,
