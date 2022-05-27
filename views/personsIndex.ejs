@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+    <style>
+        table {
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+            border-collapse: collapse;
+            width: 30%;
+        }
+        td, th {
+            border: 1 px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table>
+            <head>
+                <tr>
+                    <th>NSS</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Tipo de sangre</th>
+                </tr>
+            </head>
+            <body>
+                <% for(let i=0; i<persons.length; i++) { %>
+                    <tr>
+                        <td><%= persons[i].nss %></td>
+                        <td><%= persons[i].nombre %></td>
+                        <td><%= persons[i].edad %></td>
+                        <td><%= persons[i].tipoSangre %></td>
+                    </tr>
+                <% } %>
+            </body>
+        </table>
+        <div>
+            <a href="./main"> Back </a>
+        </div>
+    </body>
+</html>
