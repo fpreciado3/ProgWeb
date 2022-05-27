@@ -10,12 +10,12 @@ router.get('/persons', function(req, res, next) { // agregando ruta persons con 
     });
 });
 
-router.get('/person', function(req, res) { 
-    res.render('person'); // render de vista
+router.get('/person', function(req, res) {  //get de ruta 
+    res.render('person'); // render de vista person
 });
 
-router.get('/main', function(req, res) {
-    res.render('main');
+router.get('/main', function(req, res) { // get de ruta 
+    res.render('main'); // render de vista main
 });
 
 router.post('/addPerson', function(req, res) { // realizando addperson con POST
